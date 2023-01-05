@@ -13,6 +13,7 @@
         table {
             width: 500px;
             border-collapse: collapse;
+            position: relative;
         }
 
         td, th {
@@ -20,9 +21,32 @@
             padding: 8px;
         }
 
+        caption {
+            font-size: 1.5em;
+            font-weight: bold;
+            padding: 10px;
+            background-color: lightgray;
+        }
+
         thead, tfoot {
-            background-color: gray;
+            background-color: #3f3434;
             color: white;
+        }
+
+        thead > tr > th {
+            position: sticky;
+            top: -1px;
+            background-color: #3f3434;
+        }
+
+        tbody > tr:nth-child(odd) { /* 2n-1 */
+            background-color: white;
+            /* font-weight: bold; */
+        }
+
+        tbody > tr:nth-child(even) { /* 2n */
+            background-color: lightgray;
+            /* text-decoration: underline; */
         }
 
         td.num {
@@ -34,18 +58,20 @@
     <h1>Uso de tabelas grandes</h1>
     <!-- ANATOMIA PARA TABELAS GRANDES
     TABLE
-        THEAD
-        tr, td, th
-            TBODY
+        CAPTION
+            THEAD
                 tr, td, th
-                TFOOT
-                    tr, td, th
+                    TBODY
+                     tr, td, th
+                        TFOOT
+                            tr, td, th
     -->
     <table>
+        <caption>População das Unidades Federativas</caption>
         <thead>
             <tr>
-                <th>Estado</th>
-                <th>População</th>
+                <th scope="col">Estado</th>
+                <th scope="col" style="width: 50px;">População</th>
             </tr>
         </thead>
         <tbody>
@@ -160,10 +186,27 @@
         </tbody>
         <tfoot>
             <tr>
-                <th>Total de habitantes</th>
+                <th scope="row">Total de habitantes</th>
                 <td class="num"><strong>1.114.079.373</strong></td>
             </tr>
         </tfoot>
     </table>
+    <p>
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ea mollitia officiis maiores sed odit incidunt illo alias quasi quo aspernatur! Ipsa suscipit voluptatibus voluptas laborum? Officia qui et tenetur hic.
+        Eius perferendis expedita culpa ea sed pariatur doloribus ad inventore sequi dolore non illum qui dolores incidunt hic, ut quo atque voluptas nemo est nesciunt doloremque tempora quisquam. Praesentium, vero?
+    </p>
+
+    <p>
+        Odit aspernatur, suscipit laudantium aperiam consequatur reprehenderit iusto tempora beatae dolore hic quos saepe minus inventore voluptates natus enim. Officiis excepturi architecto pariatur voluptatibus odio voluptates enim reprehenderit rerum earum.
+        Facere adipisci asperiores dolores distinctio rem odit rerum! Perspiciatis, magni neque molestiae laborum nisi asperiores, eos voluptates dolore fugit quae sunt deserunt perferendis amet, dignissimos et atque quibusdam similique illum?
+    </p>
+
+    <p>Aspernatur tenetur vero quae reprehenderit hic excepturi, est expedita sapiente minima nulla. Fuga ullam vero modi reiciendis repellat? At aspernatur rem non similique, quod dicta nesciunt? Vero suscipit perspiciatis odit!</p>
+
+    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit minima eveniet labore sunt sit libero officia accusamus nam ullam pariatur veritatis numquam neque esse placeat, quam dolorum. Facilis, exercitationem optio?
+    Eius maiores illum provident velit sequi. Laboriosam tempora quod eum non nam quaerat accusantium explicabo, iusto, odit, dolorem nulla corrupti dignissimos et at laborum deleniti soluta optio voluptate aspernatur? Voluptatum.
+    Facere dolorum quae facilis eligendi ut exercitationem recusandae dolore officiis perspiciatis corrupti, fugit, provident, est quod tempora magni cum sapiente? Vel earum neque beatae modi molestias? Qui aspernatur facilis eaque?</p>
+
+    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolorem dolor deserunt quisquam, totam, rem aut, obcaecati reiciendis suscipit tempore hic blanditiis odio. Sunt quod beatae id recusandae non error facilis!</p>
 </body>
 </html>
