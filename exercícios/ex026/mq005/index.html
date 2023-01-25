@@ -5,10 +5,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Media Query</title>
-    <link rel="stylesheet" href="estilos/style.css">
     <script src="https://kit.fontawesome.com/c49441a595.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="estilos/style.css">
+    <link rel="stylesheet" href="estilos/mediaquery.css">
 </head>
-<body>
+<body onresize="mudouTamanho();">
     <header>
         <h1>Meu Site</h1>
         <i id="menu" class="fa-solid fa-bars" onclick="clickMenu();"></i>
@@ -35,7 +36,15 @@
     </main>
 
     <script>
-        let menu = document.querySelector('#menu');
+
+        function mudouTamanho() {
+            if (window.innerWidth >= 768) {
+                itens.style.display = 'block';
+            } else {
+                itens.style.display = 'none';
+            }
+        }
+
         function clickMenu() {
             if (itens.style.display == 'block') {
                 itens.style.display = 'none';
