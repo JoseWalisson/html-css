@@ -1,0 +1,26 @@
+@charset "UTF-8";
+
+:root {
+    --main-color: #5f9ea0;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    width: 90%;
+    background-color: var(--main-color);
+    margin: 2rem auto;
+    color: #0a1616
+}
+
+.btn {
+    padding: 1rem;
+    border-radius: .5em;
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 1px; /* Controla o espaçamento entre caracteres */
+    display: block;
+    width: fit-content; /* quando você deseja que um elemento tenha uma largura igual ao seu conteúdo, mas não exceda um tamanho máximo pré-determinado. */
+    margin-left: auto;
+    background-color: color-mix(in srgb, var(--main-color), black 50%);
+    color: white;
+}
